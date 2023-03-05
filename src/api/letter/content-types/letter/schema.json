@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "letters",
+  "info": {
+    "singularName": "letter",
+    "pluralName": "letters",
+    "displayName": "letter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "alphabet": {
+      "type": "string"
+    },
+    "glosariums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::glosarium.glosarium",
+      "mappedBy": "letter"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "alphabet"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "glosariums",
+  "info": {
+    "singularName": "glosarium",
+    "pluralName": "glosariums",
+    "displayName": "glosarium",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "letter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::letter.letter",
+      "inversedBy": "glosariums"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    }
+  }
+}
